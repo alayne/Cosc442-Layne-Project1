@@ -28,8 +28,10 @@ public class GameBoard {
 	}
 	
 	public void addCell(PropertyCell cell) {
-		int propertyNumber = getPropertyNumberForColor(cell.getColorGroup());
-		colorGroups.put(cell.getColorGroup(), new Integer(propertyNumber + 1));
+		//New variable below
+		String colorGroup = cell.getColorGroup();
+		int propertyNumber = getPropertyNumberForColor(colorGroup);
+		colorGroups.put(colorGroup, new Integer(propertyNumber + 1));
         cells.add(cell);
 	}
 
